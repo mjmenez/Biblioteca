@@ -1,0 +1,51 @@
+<div class="col">
+    <div class="row">
+        <h1>Estanteria</h1>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <mat-card>
+                    <mat-card-title>Filtros</mat-card-title>
+                    <mat-card-content>
+                        <button class="btn-add" mat-mini-fab matTooltip="Agregar"  aria-label="btnAgrear" (click)="btnAgregar()">
+                            <mat-icon>add</mat-icon>
+                          </button>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<ng-template #diaForm>
+    <h2 mat-dialog-title>Libro</h2>
+    <mat-dialog-content>
+        <form [formGroup]="form">
+            
+            <mat-form-field class="w-100">
+                <mat-label>Estante</mat-label>
+              <input matInput formControlName="estante" placeholder="Estante">
+            </mat-form-field>
+            <mat-form-field class="w-100">
+                <mat-label>Sala</mat-label>
+              <input matInput formControlName="sala" placeholder="Sala">
+            </mat-form-field>
+            <mat-form-field class="w-100">
+                <mat-label>Librero</mat-label>
+                <input matInput formControlName="librero" placeholder="Librero">
+              </mat-form-field>
+            <mat-form-field class="w-100">
+                <mat-label>Posición</mat-label>
+              <input matInput formControlName="posicion" placeholder="Posición">
+            </mat-form-field>
+           
+          </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>Close</button>
+      <button mat-button color="primary" (click)="btnGuardar()">Guardar</button>
+    </mat-dialog-actions>
+</ng-template>
